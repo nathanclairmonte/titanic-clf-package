@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List, Optional, Sequence
+from typing import List, Optional
 
 from pydantic import BaseModel
 from strictyaml import YAML, load
@@ -40,7 +40,7 @@ class MLConfig(BaseModel):
     name_var: str
     test_size: float
     log_reg_c: float
-    random_state: float
+    random_state: int
 
 class Config(BaseModel):
     """Master config object"""
@@ -76,7 +76,7 @@ def create_and_validate_config(parsed_config: YAML = None) -> Config:
 
     _config = Config(
         app_config=AppConfig(**parsed_config.data),
-        ml_condfig=MLConfig(**parsed_config.data)
+        ml_config=MLConfig(**parsed_config.data)
     )
 
     return _config
