@@ -22,7 +22,7 @@ pipeline = Pipeline([
                                             variables=config.ml_config.num_vars)),
 
     # extract letter from each cabin entry
-    ('letter_extractor', ft.ExtractLetterTransformer(variables=config.ml_config.cabin_var)),
+    ('letter_extractor', ft.ExtractLetterTransformer(variables=[config.ml_config.cabin_var])),
 
     
     # ------ CATEGORICAL ENCODING ------
