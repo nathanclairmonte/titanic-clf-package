@@ -1,0 +1,51 @@
+# Package overview
+package_name: classification_model
+
+# Data files
+train_data_file: train.csv
+test_data_file: test.csv
+
+# Pipeline
+pipeline_name: classification_model
+pipeline_save_file: classification_model_output_v
+
+# Data variables
+target: survived
+
+features:
+    - age
+    - fare
+    - sex
+    - cabin
+    - embarked
+    - title
+
+num_vars:
+    - age
+    - fare
+
+cat_vars:
+    - sex
+    - cabin
+    - embarked
+    - title
+
+drop_vars:
+    - name
+    - ticket
+    - boat
+    - body
+    - home.dest
+
+cabin_var: cabin
+
+title_var: title
+
+name_var: name
+
+# misc
+test_size: 0.2
+
+log_reg_c: 0.0005
+
+random_state: 0
