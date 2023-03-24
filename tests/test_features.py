@@ -12,6 +12,6 @@ def test_extract_letter_transformer(sample_input_data):
     subject = transformer.fit_transform(sample_input_data)
 
     # then
-    assert sample_input_data[config.ml_config.cabin_var].iat[0] == "B"
-    assert sample_input_data[config.ml_config.cabin_var].iat[114] == "C"
-    assert sample_input_data[config.ml_config.cabin_var].iat[172] == "E"
+    assert subject[config.ml_config.cabin_var].iat[0] == "B"
+    assert subject[config.ml_config.cabin_var].iat[114] == "C"
+    assert subject[config.ml_config.cabin_var].iat[172] == "E"
