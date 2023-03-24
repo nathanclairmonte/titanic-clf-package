@@ -1,5 +1,8 @@
 from classification_model.config.core import config
-from classification_model.processing.feature_transformers import ExtractLetterTransformer
+from classification_model.processing.feature_transformers import (
+    ExtractLetterTransformer,
+)
+
 
 def test_extract_letter_transformer(sample_input_data):
     # given

@@ -3,6 +3,7 @@ from typing import List
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 
+
 class ExtractLetterTransformer(BaseEstimator, TransformerMixin):
     """
     Extract the first letter of the cabin variable.
@@ -16,7 +17,7 @@ class ExtractLetterTransformer(BaseEstimator, TransformerMixin):
 
         self.variables = variables
 
-    def fit(self, X: pd.DataFrame, y: pd.Series=None):
+    def fit(self, X: pd.DataFrame, y: pd.Series = None):
         # just including this function to match sklearn pipeline
         return self
 
@@ -24,8 +25,8 @@ class ExtractLetterTransformer(BaseEstimator, TransformerMixin):
 
         # copying so we don't overwrite original df
         X = X.copy()
-        
+
         for feature in self.variables:
             X[feature] = X[feature].str[0]
-        
+
         return X

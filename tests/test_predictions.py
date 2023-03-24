@@ -1,7 +1,7 @@
-import math
 import numpy as np
 
 from classification_model.predict import make_prediction
+
 
 def test_make_prediction(sample_input_data):
     # given
@@ -12,7 +12,7 @@ def test_make_prediction(sample_input_data):
     result = make_prediction(input_data=sample_input_data)
 
     # then
-    predictions = result.get("predictions") # using .get here in case key doesn't exist
+    predictions = result.get("predictions")  # using .get here in case key doesn't exist
     print(len(predictions))
     assert isinstance(predictions, np.ndarray)
     assert all(isinstance(x, np.int64) for x in predictions)

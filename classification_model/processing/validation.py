@@ -4,9 +4,6 @@ import numpy as np
 import pandas as pd
 from pydantic import BaseModel, ValidationError
 
-from classification_model.config.core import config
-from classification_model.processing.data_manager import _early_processing
-
 # def drop_nan_rows(*, input_data: pd.DataFrame) -> pd.DataFrame:
 #     """
 #     Function to drop NaN values from data that will be passed to
@@ -19,6 +16,7 @@ from classification_model.processing.data_manager import _early_processing
 #     is left empty here.
 #     """
 #     pass
+
 
 def validate_data(*, input_data: pd.DataFrame) -> Tuple[pd.DataFrame, Optional[dict]]:
     """
@@ -44,6 +42,7 @@ def validate_data(*, input_data: pd.DataFrame) -> Tuple[pd.DataFrame, Optional[d
 
     return validated_data, errors
 
+
 class TitanicDataRowSchema(BaseModel):
     survived: Optional[int]
     age: Optional[float]
@@ -52,6 +51,7 @@ class TitanicDataRowSchema(BaseModel):
     cabin: Optional[str]
     embarked: Optional[str]
     title: Optional[str]
+
 
 class TitanicDataset(BaseModel):
     data: List[TitanicDataRowSchema]
