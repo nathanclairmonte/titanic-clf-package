@@ -29,7 +29,8 @@ def validate_data(*, input_data: pd.DataFrame) -> Tuple[pd.DataFrame, Optional[d
     validates data with pydantic classes.
     """
 
-    validated_data = _early_processing(input_data)
+    # validated_data = _early_processing(input_data)
+    validated_data = input_data.copy()
     errors = None
 
     try:
