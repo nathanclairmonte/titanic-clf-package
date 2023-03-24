@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# # datafiles
+# packages/classification_model/classification_model/datasets/*.csv
+# train.csv
+# test.csv
+
+# all logs
+logs/
+
+# trained model
+classification_model/trained_models/*.pkl
