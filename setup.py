@@ -10,7 +10,7 @@ NAME = 'nc-classification-model'
 DESCRIPTION = """
 Simple classification model package for titanic survival dataset, made by Nathan Clairmonte.
 """
-URL = "https://github.com/trainindata/testing-and-monitoring-ml-deployments"
+URL = "https://github.com/nathanclairmonte/titanic-clf-package"
 EMAIL = "nathanclairmonte@outlook.com"
 AUTHOR = "Nathan Clairmonte"
 REQUIRES_PYTHON = ">=3.6.0"
