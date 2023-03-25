@@ -7,7 +7,9 @@ from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = 'nc-classification-model'
-DESCRIPTION = "Simple classification model package by Nathan Clairmonte."
+DESCRIPTION = """
+Simple classification model package for titanic survival dataset, made by Nathan Clairmonte.
+"""
 URL = "https://github.com/trainindata/testing-and-monitoring-ml-deployments"
 EMAIL = "nathanclairmonte@outlook.com"
 AUTHOR = "Nathan Clairmonte"
